@@ -1,0 +1,23 @@
+{
+  "name": "mvc-challenge-tech-blog",
+  "version": "1.0.0",
+  "description": "Tech Blog Style Web Page using mvc methodology",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esroleo/mvc-challenge-tech-blog.git"
+  },
+  "keywords": [
+    "mvc"
+  ],
+  "author": "Esteban Romero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esroleo/mvc-challenge-tech-blog/issues"
+  },
+  "homepage": "https://github.com/esroleo/mvc-challenge-tech-blog#readme"
+}
