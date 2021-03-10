@@ -22,7 +22,7 @@ router.get('/',  (req, res) => {
 
   // POST /api/users - equal to insert
 router.post('/', (req, res) => {
-    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+    // expects {username: 'test', email: 'test@gmail.com', password: 'test'}
     User.create({
       username: req.body.username,
       email: req.body.email,
@@ -37,13 +37,7 @@ router.post('/', (req, res) => {
         res.json(dbUserData);
       });
     })
-    /*
-      .then(dbUserData => res.json(dbUserData))
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-      */
+
   });
 
   module.exports = router;
