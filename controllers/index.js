@@ -4,17 +4,19 @@ const router = require('express').Router();
 // *** Homepage router with GET's *** //
 const homeRoutes = require('./home-routes.js');
 
-// *** Dashboard router with GET's *** //
-const dashboardRoutes = require('./dashboard-routes.js');
-
 // *** Api router *** //
 const apiRoutes = require('./api');
+
+// *** Dashboard router with GET's *** //
+//const dashboardRoutes = require('./dashboard-routes.js');
+
+
 
 
 // routing paths
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
-router.use('/dashboard', dashboardRoutes);
+//router.use('/dashboard', dashboardRoutes);
 
 // 404 Not Found HTTP request was not found
 router.use((req, res) => {
