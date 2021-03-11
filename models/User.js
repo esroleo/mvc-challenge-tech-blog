@@ -7,9 +7,9 @@ const sequelize = require('../config/connection');
 // create our User model which is the user table.
 class User extends Model {
     // set up method to run on instance data (per user) to check password
-    // checkPassword(loginPw) {
-    //     return bcrypt.compareSync(loginPw, this.password);
-    // }
+    checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+    }
 }
 
 // Sample
@@ -76,31 +76,21 @@ User.init(
         }
       }
     },
-    
     {
-        // promise function plain
-        // hooks: {
-        //     // set up beforeCreate lifecycle "hook" functionality
-        //     beforeCreate(userData) {
-        //         return bcrypt.hash(userData.password, 10).then(newUserData => {
-        //         return newUserData
-        //         });
-        //     }
-        // }
-
-        // promise funciton async/await
-        // hooks: {
-        //     // set up beforeCreate lifecycle "hook" functionality
-        //     async beforeCreate(newUserData) {
-        //       newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        //       return newUserData;
-        //     },
-        //     // set up beforeUpdate lifecycle "hook" functionality
-        //     async beforeUpdate(updatedUserData) {
-        //         updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-        //         return updatedUserData;
-        //     }
-        //  },
+        //promise funciton async/await
+        //compare hash everytime a user is created and saved for later.
+        hooks: {
+            // set up beforeCreate lifecycle "hook" functionality
+            async beforeCreate(newUserData) {
+              newUserData.password = await bcrypt.hash(newUserData.password, 10);
+              return newUserData;
+            },
+            // set up beforeUpdate lifecycle "hook" functionality
+            async beforeUpdate(updatedUserData) {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData;
+            }
+         },
         sequelize,
         timestamps: false,
         freezeTableName: true,
