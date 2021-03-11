@@ -55,9 +55,12 @@ router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
+  } else {
+    res.render('login');
   }
-  res.render('login');
+  
 });
+
 
 // // logic for single-post handlebar
 // router.get('/post/:id', (req, res) => {
