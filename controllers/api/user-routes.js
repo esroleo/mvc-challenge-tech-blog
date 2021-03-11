@@ -20,14 +20,6 @@ router.get('/',  (req, res) => {
 // GET /api/users/1 by id
 router.get('/:id', (req, res) => {
   User.findOne({
-    /* Full story. 
-     Step 1 - Give me all attributes of user table/model without password.
-     Step 2 - Gie me an array of objects with the joint data of table post.
-     incuding specif fields.
-     Step 3 - Give me all the votes_posts of specific users by matching their upvotes
-     through trough the vote table to the posts. 
-     This means that I will receive the upvote information based on the post_id/user_id
-     */
     attributes: { exclude: ['password'] },
     where: {
       id: req.params.id
@@ -71,7 +63,7 @@ router.post('/', (req, res) => {
     // expects {username: 'test', email: 'test@gmail.com', password: 'test'}
     User.create({
       username: req.body.username,
-      email: req.body.email,
+      //email: req.body.email,
       password: req.body.password
     })
     .then(dbUserData => {
@@ -92,7 +84,7 @@ router.post('/login', (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
     User.findOne({
       where: {
-        email: req.body.email
+        username: req.body.username
       }
     }).then(dbUserData => { // User retrived from the database
       if (!dbUserData) {
