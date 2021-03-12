@@ -11,6 +11,14 @@ Comment.init(
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
+
+        /*
+              created_at as an argument-->
+      {{user.username}} on {{format_date created_at}}
+    </div>
+    <div class="text">
+      {{comment_text}}
+        */
     },
     comment_text: {
         type: DataTypes.STRING,

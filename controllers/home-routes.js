@@ -106,7 +106,7 @@ router.get('/post/:id', (req, res) => {
         return;
       }
 
-      // serialize the data to make it visible
+      // serialize the data be visible as an object
       const post = dbPostData.get({ plain: true });
 
       // pass data to template
