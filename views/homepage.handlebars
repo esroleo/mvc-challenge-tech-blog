@@ -23,7 +23,9 @@ home-routes.js controller api -->
 
 <!-- Object post coming from the home-routes.js --> 
 
-<div class="post-list"> 
+
+
+<div class="container"> 
     {{#each posts as |post|}}
     {{> post-info post }}
   {{/each}}
@@ -57,6 +59,3 @@ home-routes.js controller api -->
 
 --> 
 
-{{#if loggedIn}}
-<script src="/javascript/idle-timer.js"></script>
-{{/if}}

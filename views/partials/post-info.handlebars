@@ -1,11 +1,14 @@
 <!-- use property names as the object is not known to post-info --> 
 
-<article class="post">
-  <div class="title">
-    <a href="/post/{{id}}">{{title}}</a>
-    <p>Posted by {{user.username}} on {{format_date created_at}}
+<article class="post border border-success">
+  <div class="title container ">
+    <div class="d-flex flex-row justify-content-between">
+      <div class="justify-content-start"><a href="/post/{{id}}">{{title}}</a></div>
+      <div class="justify-content-end"><p>Posted by {{user.username}} on {{format_date created_at}}</div>
+    </div>
+    
   </div>
-  <div class="meta">
+  <div class="meta container">
     <p>{{contents}} </p>
     <!--post_url-->
   </div>

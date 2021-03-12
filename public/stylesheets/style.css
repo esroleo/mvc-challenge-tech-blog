@@ -101,7 +101,7 @@ main {
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
-  margin-left: 16px;
+  margin-left: 0px;
 }
 
 .btn-no-style:hover {
