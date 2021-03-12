@@ -61,6 +61,16 @@ router.get('/login', (req, res) => {
   
 });
 
+router.get('/signUp', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  } else {
+    res.render('signUp');
+  }
+  
+});
+
 
 // // logic for single-post handlebar
 // router.get('/post/:id', (req, res) => {

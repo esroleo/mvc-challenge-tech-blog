@@ -1,7 +1,7 @@
 <form class="login-form">
     <div>
-        <label for="email-login">email:</label>
-        <input type="text" id="email-login" />
+        <label for="username-login">username:</label>
+        <input type="text" id="username-login" />
     </div>
     <div>
         <label for="password-login">password:</label>
@@ -10,10 +10,14 @@
     <div>
         <button type="submit">Login!</button>
     </div>
+
     <div>
-        <button type="submit">Sign up instead</button>
+        <a href="/signUp"><button type="button" class="button is-danger">Sign up</button></a>
     </div>
+
 </form>
+
+
 
 <!-- Only added to this handlebar as is where the logic is required for logging in -->
 <!-- Absolute path requiered in back end as js code is not to be sent to the client -->

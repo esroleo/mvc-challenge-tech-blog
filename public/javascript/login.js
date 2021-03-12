@@ -6,15 +6,16 @@
 
 async function loginFormHandler(event) {
     event.preventDefault();
+    console.log("botton clicked")
   
-    const email = document.querySelector('#email-login').value.trim();
+    const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
-    if (email && password) {
+    if (username && password) {
       const response = await fetch('/api/users/login', {
         method: 'post',
         body: JSON.stringify({
-          email,
+          username,
           password
         }),
         headers: { 'Content-Type': 'application/json' }
@@ -24,7 +25,8 @@ async function loginFormHandler(event) {
           // go back to homepage after loggin in
           // updated - go to create dashboard after logging in
         //document.location.replace('/');
-        document.location.replace('/dashboard');
+        //document.location.replace('/dashboard');
+        document.location.replace('/');
       } else {
         alert(response.statusText);
       }
@@ -37,51 +39,3 @@ async function loginFormHandler(event) {
   // Sign in Logic
 
 
-async function signupFormHandler(event) {
-    event.preventDefault();
-    const username = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-
-    if (username && email && password) {
-        const response = await fetch('/api/users', {
-          method: 'post',
-          body: JSON.stringify({
-            username,
-            email,
-            password
-          }),
-          headers: { 'Content-Type': 'application/json' }
-        });
-       // console.log(response);.
-           // check the response status
-        if (response.ok) {
-            //console.log(`this is the response ${response}`)
-            
-            console.log('success');
-        } else {
-            alert(response.statusText);
-        }
-      }
-
-    // if (username && email && password) {
-    //     await fetch('/api/users', {
-    //       method: 'post',
-    //       body: JSON.stringify({
-    //         /*this is what stringify is translating the data into.
-    //          {username: "esroleo", email: "esroleo@gmail.com", password: "test"}
-    //         email: "esroleo@gmail.com"
-    //         password: "test"
-    //         username: "esroleo"
-    //         */
-    //         username,
-    //         email,
-    //         password
-    //       }),
-    //       headers: { 'Content-Type': 'application/json' }
-    //     }).then((response) => {console.log(response)})
-    //   }
-  
-  }
-
-  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
