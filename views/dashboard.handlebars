@@ -1,0 +1,21 @@
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+    <!-- post-infor is a partial --> 
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<div class="wrapper">
+<button onclick="window.location.href='/dashboard/full'" type="submit" class="btn">Create Post</button>
+</div>
+
+<script src="/javascript/add-post.js"></script>

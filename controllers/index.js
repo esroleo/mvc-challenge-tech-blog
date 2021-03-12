@@ -8,7 +8,7 @@ const homeRoutes = require('./home-routes.js');
 const apiRoutes = require('./api');
 
 // *** Dashboard router with GET's *** //
-//const dashboardRoutes = require('./dashboard-routes.js');
+const dashboardRoutes = require('./dashboard-routes.js');
 
 
 
@@ -16,7 +16,7 @@ const apiRoutes = require('./api');
 // routing paths
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
-//router.use('/dashboard', dashboardRoutes);
+router.use('/dashboard', dashboardRoutes);
 
 // 404 Not Found HTTP request was not found
 router.use((req, res) => {
