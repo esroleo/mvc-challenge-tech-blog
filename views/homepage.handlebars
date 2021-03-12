@@ -23,15 +23,12 @@ home-routes.js controller api -->
 
 <!-- Object post coming from the home-routes.js --> 
 
-
-
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
+<div class="post-list"> 
+    {{#each posts as |post|}}
     {{> post-info post }}
-  </li>
   {{/each}}
-</ol>
+</div>
+
 
 
 
