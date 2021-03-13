@@ -3,7 +3,7 @@
 
 
 function idleLogout() {
-    var timer;
+    var timmer;
     window.onload = resetTimer;
     window.onmousemove = resetTimer;
     window.onmousedown = resetTimer;  // catches touchscreen presses as well      
@@ -40,8 +40,8 @@ function idleLogout() {
     }
   
     function resetTimer() {
-        clearTimeout(timer);
-        t = setTimeout(logout, 300000);  // will automatically log you out in 5 minutes.
+        clearTimeout(timmer);
+        timmer = setTimeout(logout, 300000);  // will automatically log you out in 5 minutes.
     }
   }
   idleLogout();
