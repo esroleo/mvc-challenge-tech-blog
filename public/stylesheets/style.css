@@ -200,6 +200,7 @@ main {
 footer {
   margin-top: 5%;
   border-top: 1px solid #ccc;
+  position: relative;
 }
 
 
@@ -211,9 +212,7 @@ footer {
   }
 
   footer {
-    position: relative;
     text-align: center;
-
   }
 
 

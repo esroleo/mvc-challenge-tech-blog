@@ -40,7 +40,7 @@ function idleLogout() {
     }
   
     function resetTimer() {
-        clearTimeout(t);
+        clearTimeout(timer);
         t = setTimeout(logout, 300000);  // will automatically log you out in 5 minutes.
     }
   }

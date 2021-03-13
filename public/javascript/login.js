@@ -28,7 +28,8 @@ async function loginFormHandler(event) {
         //document.location.replace('/dashboard');
         document.location.replace('/');
       } else {
-        alert(response.statusText);
+        // alert(response.statusText);
+        alert("Username or password incorrect, please try again.");
       }
     }
   }
