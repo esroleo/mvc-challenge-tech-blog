@@ -87,15 +87,12 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
- 
   padding: 0 1%;
 }
 
 nav {
   font-size: 1.25rem;
 }
-
-
 
 main {
   flex: 1;
@@ -174,13 +171,17 @@ main {
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color: rgba(113, 99, 255, 0.25);
 }
 
 .comment .meta {
   font-size: 90%;
   margin-bottom: .5%;
   opacity: .6;
+}
+
+.border {
+  background-color: rgba(113, 99, 255, .15);
 }
 
 .new-post-form textarea,input,btn {
@@ -194,11 +195,14 @@ main {
 }
 
 footer {
+  margin-top: 2%;
   border-top: 1px solid #ccc;
   display: flex;
-  justify-content: center;
-  padding: 1%;
-  font-size: 110%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1%;
+  bottom: 0;
+
 }
 
 
@@ -207,6 +211,12 @@ footer {
 
   header {
     justify-content: center;
+  }
+
+  footer {
+
+    justify-content: center;
+
   }
 
 

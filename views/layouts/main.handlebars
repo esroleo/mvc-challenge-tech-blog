@@ -11,30 +11,28 @@
 
 <body>
   <div class="container">
- 
       
       <header>
-        <nav class="title">
+          <nav class="title">
 
-            <a href="/">The Tech Blog</a>
-
-        </nav>
-        <nav>
-          {{#if loggedIn}}
-          <a href="/">Homepage</a>
-          <a href="/dashboard">Dashboard</a>
-          <button id="logout" class="btn-no-style">Logout</button>
-          {{else}}
-          <a href="/">Homepage</a>
-          <a href="/dashboard">Dashboard</a>
-          <a href="/login">Login</a>
-          {{/if}}
-        </nav>
+              <a href="/">The Tech Blog</a>
+          </nav>
+          <nav>
+            {{#if loggedIn}}
+              <a href="/">Homepage</a>
+              <a href="/dashboard">Dashboard</a>
+              <button id="logout" class="btn-no-style">Logout</button>
+            {{else}}
+              <a href="/">Homepage</a>
+              <a href="/dashboard">Dashboard</a>
+              <a href="/login">Login</a>
+            {{/if}}
+          </nav>
         </header>
  
     
 
-          <div class="container">
+          <div class="container site-content">
             <!-- Content here -->
             <main>
             {{{ body }}}
@@ -43,8 +41,24 @@
 
 
       <footer>
-        For any questions, please visit the repo https://github.com/esroleo/mvc-challenge-tech-blog
+ 
+            <div id="contact-me" class="container"> <!-- Id's coming from the header nav and a flex wrapper -->
+            <div class="d-flex flex-row bd-highlight mb-3 justify-content-between flex-wrap "> <!-- footer container is a grid container -->
+                <!-- Each grid item has its own grid location achieved by creating one object/instance per class -->
+                <div class="footer-grid-item phone">
+                    <a href="tel:416-629-7952" class="nav-effects">416-629-7952</a>
+                </div>
+                <div class="footer-grid-item email"> 
+                    <a href="mailto:esroleo@gmail.com">esroleo@gmail.com</a>
+                </div>
+                <div class="footer-grid-item git-hub"> 
+                    <a href="https://github.com/esroleo/" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
       </footer>
+
+      
     
   </div>
 
