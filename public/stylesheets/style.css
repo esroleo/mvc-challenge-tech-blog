@@ -90,6 +90,8 @@ header {
   padding: 0 1%;
 }
 
+
+
 nav {
   font-size: 1.25rem;
 }
@@ -195,14 +197,8 @@ main {
 }
 
 footer {
-  margin-top: 2%;
+  margin-top: 5%;
   border-top: 1px solid #ccc;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0 1%;
-  bottom: 0;
-
 }
 
 
@@ -214,10 +210,10 @@ footer {
   }
 
   footer {
-
-    justify-content: center;
+    text-align: center;
 
   }
+
 
 
 
