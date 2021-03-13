@@ -23,15 +23,13 @@
 <br>
 <section>
   <h2>Your Posts</h2>
-  <ol>
     {{#each posts as |post|}}
-    <li>
     <!-- post-infor is a partial --> 
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
+      <div class="wrapper">
+      <button onclick="window.location.href='/dashboard/edit/{{post.id}}'" type="submit" class="edit-link btn btn-primary btn-lg">Edit post</button>
+      </div>
     {{/each}}
-  </ol>
 </section>
 {{/if}}
 

@@ -85,6 +85,7 @@ header {
   margin-top: 2%;
   border-bottom: 1px solid #ccc;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
  
   padding: 0 1%;
@@ -198,4 +199,18 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+
+
+@media screen and  (max-width: 575px) {
+  /* Start of footer grid smaller screen code changes at res */
+
+  header {
+    justify-content: center;
+  }
+
+
+
+
+
 }
