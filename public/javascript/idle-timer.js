@@ -3,19 +3,18 @@
 
 
 function idleLogout() {
-    var t;
+    var timer;
     window.onload = resetTimer;
     window.onmousemove = resetTimer;
     window.onmousedown = resetTimer;  // catches touchscreen presses as well      
     window.ontouchstart = resetTimer; // catches touchscreen swipes as well 
     window.onclick = resetTimer;      // catches touchpad clicks as well
     window.onkeydown = resetTimer;   
-    window.addEventListener('scroll', resetTimer, true); // improved; see comments
+    window.addEventListener('scroll', resetTimer, true); // 
   
     async function logout() {
-        // your function for too long inactivity goes here
-        // e.g. window.location.href = 'logout.php';
-        alert("you have been idel for 10 seconds")
+
+        alert("You have been idle for 5 minutes, logging you out.")
 
         const response = await fetch('/api/users/logout', {
             method: 'post',
