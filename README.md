@@ -51,8 +51,6 @@ Part 1 - Walkthrough video on how to use the website application plus how the ti
 
 https://drive.google.com/file/d/17lWIaWopnhrKYeGE9xgRl267fyOmHrke/view
 
-![step](./assets/images/timerTriggered.JPG?raw=true "timerTriggered.JPG")
-
 <a name="features"></a>
 ## 4. Features
 
@@ -91,7 +89,7 @@ Application is both desktop and mobile friendly.
 
 ![step](./assets/images/new-comment-screen-added-desktop.JPG?raw=true "new-comment-screen-added-desktop.JPG")
 
-![step](./assets/images/new-comment-screen-added-desktop-mobile.JPG?raw=true "new-comment-screen-added-desktop-mobile.JPG")
+![step](./assets/images/new-comment-screen-added-mobile.JPG?raw=true "new-comment-screen-added-mobile.JPG")
 
 ### Post Deleted Dashboard Empty
 
@@ -99,25 +97,9 @@ Application is both desktop and mobile friendly.
 
 ![step](./assets/images/post-deleted-mobile.JPG?raw=true "post-deleted-mobile.JPG")
 
+### Timer Triggers After 5 Minutes
 
-
-
-
-### PUT/Update product by ID.
-
-![step](./assets/images/insomnia_put_update.JPG?raw=true "insomnia_put_update.JPG")
-
-### GET product by ID after update.
-
-![step](./assets/images/insomnia_get_all_products_by_id_updated.JPG?raw=true "insomnia_get_all_products_by_id_updated.JPG")
-
-### DELETE product by ID.
-
-![step](./assets/images/insomnia_delete_by_id.JPG?raw=true "insomnia_delete_by_id.JPG")
-
-### GET product after delete not found.
-
-![step](./assets/images/insomnia_get_all_products_by_id_notfound.JPG?raw=true "insomnia_get_all_products_by_id_notfound.JPG")
+![step](./assets/images/timerTriggered.JPG?raw=true "timerTriggered.JPG")
 
 
 
@@ -142,18 +124,7 @@ npm i
 <a name="commandTest"></a>
 ## 8. Test Command
 
-You can sync model changes by changing **force: false** to true. This will also remove all data and start fresh.
-Once you have synced, stop the applicatio by using ctrl + c on your keyboard and change the force:true to false and restart the application.
-
-Once the above is done, you can now use Insomnia to do the routes commands.
-
-@ server.js line 14
-
-// sync sequelize models to the database, then turn on the server
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
-
+No test commands avaialble, if you would like any, please let me know.
 
 <a name="contributing"></a>
 ## 9. Contributing
