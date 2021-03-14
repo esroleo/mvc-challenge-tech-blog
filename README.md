@@ -26,15 +26,15 @@ This is a full stack web application that was build using bycrypt, sequelize, se
 <a name="web-address"></a>
 ## 2. How to Get There
 
-### Open your favorite web browser and enter the following web address to access to the README.md
+### Open your favorite web browser and enter the following web address to start using the website. Dont forget to watch the features video below :).
 
-https://github.com/esroleo/orm-e-commerce-back-end
+https://mvc-challenge-blog-tech.herokuapp.com/
 
 
 <a name="usage"></a>
 ## 3. Usage Tips
 
-For more information - Please visit the following videos on how the application works and some background information on the app build.
+For more information - Please visit the following videos on how the application works and some background information on website usage.
 
 If you want to run locally preform the following:
 
@@ -44,58 +44,62 @@ If you are still intersted in running the application you would need to do the f
 * run mysql terminal at project source location
   source db/schema.sql
 * npm i
-* npm run seed
 * npm start
-* use Insomnia (use videos and sample snapshots using Insomnia for Product model for your reference).
+* use website http://localhost:3001/
 
-Part 1 - Creat, Sync and Seed - Once you open the video, re-change the quality to 1080p to make sure is not blurry.
+Part 1 - Walkthrough video on how to use the website application plus how the timer works at code level.
 
-https://drive.google.com/file/d/1z2XNqvDgF5Hh081kiiVU7YK6Me6oVYZg/view
-
-Part 2 -  Functionality - Once you open the video, re-change the quality to 1080p to make sure is not blurry.
-
-https://drive.google.com/file/d/1Zyrp9xGGHMUgavJ0maclr-Fy3khwZhAI/view
-
-
-Part 3 - Functionality #2 - Once you open the video, re-change the quality to 1080p to make sure is not blurry.
-
-https://drive.google.com/file/d/1rrdGjDfXXBAhJCULTVtFThZ9iggzaNVh/view
-
+https://drive.google.com/file/d/17lWIaWopnhrKYeGE9xgRl267fyOmHrke/view
 
 <a name="features"></a>
 ## 4. Features
 
-### GET (Select All), GET by id (Select by ID), POST (Create), PUT (Update), DELETE (Destroy)
+Application is both desktop and mobile friendly.
+### Application is both desktop and mobile friendly.
 
- *** Functionality of one route as example: *** 
+### Main Page
 
-### GET all products.
+![step](./assets/images/main-page.JPG?raw=true "main-page.JPG")
 
-![step](./assets/images/insomnia_get_all_products.JPG?raw=true "insomnia_get_all_products.JPG")
+![step](./assets/images/main-page-mobile.JPG?raw=true "main-page-mobile.JPG")
 
-### GET product by ID.
+### Dashboard Create Post
 
-![step](./assets/images/insomnia_get_all_products_by_id.JPG?raw=true "insomnia_get_all_products_by_id.JPG")
+![step](./assets/images/dashboard-create-post.JPG?raw=true "dashboard-create-post.JPG")
 
-### POST/Create product.
+![step](./assets/images/dashboard-create-post-mobile.JPG?raw=true "dashboard-create-post-mobile.JPG")
 
-![step](./assets/images/insomnia_post_create_product.JPG?raw=true "insomnia_post_create_product.JPG")
+### View Dashboard Create Post
 
-### PUT/Update product by ID.
+![step](./assets/images/view-dashboard-create-post.JPG?raw=true "view-dashboard-create-post.JPG")
 
-![step](./assets/images/insomnia_put_update.JPG?raw=true "insomnia_put_update.JPG")
+![step](./assets/images/view-dashboard-create-post-mobile.JPG?raw=true "view-dashboard-create-post-mobile.JPG")
 
-### GET product by ID after update.
+![step](./assets/images/view-dashboard-create-post-new-post.JPG?raw=true "view-dashboard-create-post-new-post.JPG")
 
-![step](./assets/images/insomnia_get_all_products_by_id_updated.JPG?raw=true "insomnia_get_all_products_by_id_updated.JPG")
+![step](./assets/images/view-dashboard-create-post-new-post-mobile.JPG?raw=true "view-dashboard-create-post-new-post-mobile.JPG")
 
-### DELETE product by ID.
+### Edit Post
 
-![step](./assets/images/insomnia_delete_by_id.JPG?raw=true "insomnia_delete_by_id.JPG")
+![step](./assets/images/view-dashboard-create-post-new-post-save-delete.JPG?raw=true "view-dashboard-create-post-new-post-save-delete.JPG")
 
-### GET product after delete not found.
+![step](./assets/images/view-dashboard-create-post-new-post-save-delete-mobile.JPG?raw=true "view-dashboard-create-post-new-post-save-delete-mobile.JPG")
 
-![step](./assets/images/insomnia_get_all_products_by_id_notfound.JPG?raw=true "insomnia_get_all_products_by_id_notfound.JPG")
+### New Comment
+
+![step](./assets/images/new-comment-screen-added-desktop.JPG?raw=true "new-comment-screen-added-desktop.JPG")
+
+![step](./assets/images/new-comment-screen-added-mobile.JPG?raw=true "new-comment-screen-added-mobile.JPG")
+
+### Post Deleted Dashboard Empty
+
+![step](./assets/images/post-deleted.JPG?raw=true "post-deleted.JPG")
+
+![step](./assets/images/post-deleted-mobile.JPG?raw=true "post-deleted-mobile.JPG")
+
+### Timer Triggers After 5 Minutes
+
+![step](./assets/images/timerTriggered.JPG?raw=true "timerTriggered.JPG")
 
 
 
@@ -120,18 +124,7 @@ npm i
 <a name="commandTest"></a>
 ## 8. Test Command
 
-You can sync model changes by changing **force: false** to true. This will also remove all data and start fresh.
-Once you have synced, stop the applicatio by using ctrl + c on your keyboard and change the force:true to false and restart the application.
-
-Once the above is done, you can now use Insomnia to do the routes commands.
-
-@ server.js line 14
-
-// sync sequelize models to the database, then turn on the server
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
-
+No test commands avaialble, if you would like any, please let me know.
 
 <a name="contributing"></a>
 ## 9. Contributing
@@ -146,5 +139,7 @@ Please reach out to me
 GitHub Url: https://github.com/esroleo
 
 Email address: esroleo@gmail.com
+
+
 
 
