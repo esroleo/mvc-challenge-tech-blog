@@ -83,7 +83,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 // User sequelize to create models if any and then initalize listenting express node.js
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
   });
 
